@@ -19,6 +19,18 @@ Ejemplo: cantidadNumerosAbundantes 12 24 debe devolver 4
 
 --}
 
+sumaDivisoresPropios :: Integer -> Integer -> Integer
+sumaDivisoresPropios n m
+    |n == m = 0
+    |n mod m =
+    |otherwise = sumaDivisoresPropios n (m-1)
+esAbundante :: Integer -> Bool
+esAbundante n = sumaDivisoresPropios n
+cantidadNumerosAbundantes :: Integer -> Integer -> Integer
+cantidadNumerosAbundantes d h
+    |d == h
+    |esAbundante
+
 {--
 
 Ejercicio 2 (2 puntos)
@@ -41,6 +53,31 @@ problema cursadasVencidas (s: seq⟨String x Z x Z⟩) :seq⟨String⟩ {
 Ejemplo: cursadasVencidas [("Algoritmos y Estructuras de Datos I", 2020, 2), ("Algoritmos y Estructuras de Datos II", 2022, 1)] debe devolver ["Algoritmos y Estructuras de Datos I"]
 
 --}
+
+cursadasVencidas :: [(String, Integer, Integer)] -> [String]
+filtrarCursadasVencidas [] = []
+
+filtrarCursadasVencidasRepetidos :: [(String, Integer, Integer)] -> [String]
+filtrarCursadasVencidasRepetidos [] = []
+filtrarCursadasVencidasRepetidos 
+
+materia :: (String, Integer, Integer) -> String
+materia (m, a, c) = m
+seVencio :: (String, Integer, Integer) -> Bool
+seVencio (m, a, c)
+    |
+    |otherwise = False
+quitarRepetidos :: (String) -> (String)
+quitarRepetidos [] = []
+quitarRepetidos (x xs)
+    |pertenece x xs  = quitarRepetidos xs
+    |otherwise = x (quitarRepetidos xs)
+
+pertenece :: String -> [String] -> Bool
+pertenece _ []
+pertenece n (x xs)
+    |n == x = True
+    |otherwise = pertenece n xs
 
 {--
 
@@ -72,6 +109,8 @@ problema cantidadParesColumna (matriz: seq⟨seq⟨Z⟩⟩, col: Z) : Z{
 Ejemplo: cantidadParesColumna [[-9,8,2,3],[2,7,-5,3],[-1,0,5,6]] 2 debe devolver 2
   
 --}
+
+
 
 {--
 
